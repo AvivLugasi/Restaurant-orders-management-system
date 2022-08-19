@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signupPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1596.0" styleClass="login" stylesheets="@app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignUpController">
+   <children>
+      <ImageView fx:id="signUpImg" fitHeight="807.0" fitWidth="1684.0" layoutX="-1.0" layoutY="-3.0" onKeyTyped="#setUNamestatus" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="custFName" layoutX="717.0" layoutY="255.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="603.0" layoutY="253.0" prefHeight="27.0" prefWidth="105.0" styleClass="loginLabel" stylesheets="@app.css" text="First name:">
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+      <Label layoutX="603.0" layoutY="300.0" styleClass="loginLabel" stylesheets="@app.css" text="Last name:" />
+      <TextField fx:id="custLName" layoutX="717.0" layoutY="298.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="603.0" layoutY="354.0" styleClass="loginLabel" stylesheets="@app.css" text="Birthday:" />
+      <Label layoutX="603.0" layoutY="446.0" prefHeight="30.0" prefWidth="94.0" styleClass="loginLabel" stylesheets="@app.css" text="Gender:" />
+      <Label layoutX="603.0" layoutY="405.0" styleClass="loginLabel" stylesheets="@app.css" text="Neighberhood:" />
+      <Label fx:id="sntsLbl" layoutX="602.0" layoutY="493.0" styleClass="loginLabel" stylesheets="@app.css" text="Sensitive:" />
+      <Label fx:id="lactLbl" layoutX="756.0" layoutY="494.0" styleClass="loginLabel" stylesheets="@app.css" text="Lactose:" visible="false" />
+      <Label fx:id="gluLbl" layoutX="873.0" layoutY="495.0" styleClass="loginLabel" stylesheets="@app.css" text="Gluten:" visible="false" />
+      <RadioButton fx:id="sensRBtn" layoutX="710.0" layoutY="500.0" mnemonicParsing="false" onAction="#sensCheck" prefHeight="17.0" prefWidth="16.0" />
+      <RadioButton fx:id="lactRBtn" layoutX="842.0" layoutY="502.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0" visible="false" />
+      <RadioButton fx:id="gluRBtn" layoutX="956.0" layoutY="502.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0" visible="false" />
+      <Label layoutX="603.0" layoutY="537.0" prefHeight="27.0" prefWidth="105.0" styleClass="loginLabel" stylesheets="@app.css" text="User name:">
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custUName" layoutX="711.0" layoutY="539.0" onKeyTyped="#setUNamestatus" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="603.0" layoutY="583.0" prefHeight="27.0" prefWidth="105.0" styleClass="loginLabel" stylesheets="@app.css" text="Password:">
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custPassword" layoutX="711.0" layoutY="583.0" onKeyTyped="#setpassstatus" prefHeight="17.0" prefWidth="149.0" styleClass="loginfld" stylesheets="@app.css" />
+      <ComboBox fx:id="custGnd" layoutX="699.0" layoutY="449.0" prefHeight="25.0" prefWidth="86.0" promptText="Male" styleClass="SignUpRbtn" stylesheets="@app.css" visibleRowCount="3" />
+      <ImageView blendMode="DARKEN" fitHeight="25.0" fitWidth="50.0" layoutX="869.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true" styleClass="loginbtn">
+         <image>
+            <Image url="@../../media/readMoreIcon.png" />
+         </image>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+      <Label fx:id="infoLbl" layoutX="866.0" layoutY="593.0" prefHeight="17.0" prefWidth="31.0" />
+      <ComboBox fx:id="custneighberhood" layoutX="746.0" layoutY="408.0" prefHeight="25.0" prefWidth="174.0" promptText="Neve_Shanan" styleClass="SignUpRbtn" stylesheets="@app.css" visibleRowCount="6" />
+      <DatePicker fx:id="custBday" layoutX="725.0" layoutY="357.0" promptText="mm/dd/yyyy" stylesheets="@app.css" />
+      <ProgressBar fx:id="lowpassbar" layoutX="905.0" layoutY="595.0" prefWidth="200.0" progress="0.34" visible="false">
+         <effect>
+            <ColorAdjust brightness="0.36" contrast="0.03" hue="0.94" saturation="0.07" />
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="mediumpassbar" layoutX="905.0" layoutY="595.0" prefWidth="200.0" progress="0.54" visible="false">
+         <effect>
+            <ColorAdjust brightness="0.36" contrast="0.23" hue="-0.76" saturation="0.07" />
+         </effect>
+      </ProgressBar>
+      <ProgressBar fx:id="strongpassbar" layoutX="905.0" layoutY="595.0" prefWidth="200.0" progress="1.0" visible="false">
+         <effect>
+            <ColorAdjust brightness="0.36" contrast="0.03" hue="-0.59" saturation="0.07" />
+         </effect>
+      </ProgressBar>
+      <Label fx:id="passstatusLbl" layoutX="896.0" layoutY="559.0" textFill="#eb1010" />
+      <Button fx:id="signUpBtn" layoutX="768.0" layoutY="700.0" mnemonicParsing="false" onAction="#signUp" prefHeight="44.0" prefWidth="174.0" styleClass="loginbtn" stylesheets="@app.css" text="Sign Up" />
+      <Label fx:id="WrongFname" layoutX="881.0" layoutY="251.0" textFill="RED" />
+      <Label fx:id="WrongLname" layoutX="880.0" layoutY="303.0" textFill="RED" />
+      <Label fx:id="wrongBday" layoutX="919.0" layoutY="361.0" textFill="RED" />
+      <Label fx:id="wrongUname" layoutX="890.0" layoutY="531.0" textFill="RED" />
+      <Label fx:id="wrongP" layoutX="904.0" layoutY="568.0" textFill="RED" />
+      <Label fx:id="emptyP" layoutX="601.0" layoutY="623.0" prefWidth="161.0" textFill="RED" />
+      <ImageView fx:id="back" fitHeight="44.0" fitWidth="41.0" layoutX="1521.0" layoutY="22.0" onMouseClicked="#backToLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/backIcon.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="uploadImg" layoutX="1143.0" layoutY="256.0" mnemonicParsing="false" onAction="#upload" prefHeight="23.0" prefWidth="162.0" text="Upload Image" />
+      <ImageView fx:id="choosenImg" fitHeight="150.0" fitWidth="200.0" layoutX="1124.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="603.0" layoutY="631.0" prefHeight="27.0" prefWidth="105.0" styleClass="loginLabel" stylesheets="@app.css" text="Email:">
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailFld" layoutX="662.0" layoutY="633.0" prefHeight="23.0" prefWidth="200.0" promptText="email@gmail.com" styleClass="loginfld" stylesheets="@app.css" />
+   </children>
+</AnchorPane>

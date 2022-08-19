@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutX="10.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClientOrderManagmentController">
+   <children>
+      <ImageView fitHeight="764.0" fitWidth="2143.0" layoutX="-285.0" layoutY="-33.0">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="71.0" layoutX="301.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/prepericn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="269.0" layoutY="183.0" stylesheets="@app.css" text="On prepare">
+         <font>
+            <Font name="MS Reference Sans Serif" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="742.0" layoutY="183.0" stylesheets="@app.css" text="on route">
+         <font>
+            <Font name="MS Reference Sans Serif" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="84.0" fitWidth="78.0" layoutX="759.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/delieveryguyicn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1194.0" layoutY="183.0" stylesheets="@app.css" text="Arrived">
+         <font>
+            <Font name="MS Reference Sans Serif" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="84.0" fitWidth="78.0" layoutX="1205.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/deliveryStatusIcn.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="onPrepareList" layoutX="266.0" layoutY="309.0" prefHeight="270.0" prefWidth="154.0" styleClass="selectedresult" stylesheets="@app.css" />
+      <ListView fx:id="onRouteList" layoutX="720.0" layoutY="309.0" prefHeight="270.0" prefWidth="154.0" styleClass="selectedresult" stylesheets="@app.css" />
+      <ListView fx:id="arrivedList" layoutX="1164.0" layoutY="309.0" prefHeight="270.0" prefWidth="154.0" styleClass="selectedresult" stylesheets="@app.css" />
+      <ImageView fx:id="editBtn" fitHeight="117.0" fitWidth="71.0" layoutX="207.0" layoutY="596.0" onMouseClicked="#edit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/editIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removeOnPrepareBtn" fitHeight="117.0" fitWidth="71.0" layoutX="308.0" layoutY="596.0" onMouseClicked="#removeOnPrepare" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/removeIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="viewOnPrepareBtn" fitHeight="117.0" fitWidth="71.0" layoutX="405.0" layoutY="596.0" onMouseClicked="#viewOnPrepare" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/viewAllIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="removeOnRouteBtn" fitHeight="117.0" fitWidth="71.0" layoutX="706.0" layoutY="596.0" onMouseClicked="#removeOnRoute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/removeIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="viewOnRouteBtn" fitHeight="117.0" fitWidth="71.0" layoutX="831.0" layoutY="596.0" onMouseClicked="#viewOnRoute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/viewAllIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="viewArrivedBtn" fitHeight="117.0" fitWidth="71.0" layoutX="1206.0" layoutY="596.0" onMouseClicked="#viewArrived" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/viewAllIcon.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="toReplacePane" layoutY="-10.0" prefHeight="781.0" prefWidth="1596.0" visible="false" AnchorPane.bottomAnchor="-30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-20.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MangOpsAreaEditController">
+   <children>
+      <ImageView fitHeight="772.0" fitWidth="1624.0" layoutX="21.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="507.0" layoutY="343.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Name:" />
+      <Label layoutX="778.0" layoutY="224.0" prefHeight="46.0" prefWidth="194.0" text="Edit Area">
+         <font>
+            <Font name="Microsoft Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="editAreaBtn" layoutX="708.0" layoutY="649.0" mnemonicParsing="false" onAction="#editArea" prefHeight="36.0" prefWidth="229.0" styleClass="loginbtn" stylesheets="@app.css" text="Edit Area" />
+      <TextField fx:id="areaName" layoutX="566.0" layoutY="356.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="742.0" layoutY="343.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="deliverTime:" />
+      <TextField fx:id="delTimeFld" editable="false" layoutX="853.0" layoutY="353.0" prefHeight="26.0" prefWidth="86.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="429.0" layoutY="416.0" prefHeight="46.0" prefWidth="156.0" styleClass="loginLabel" stylesheets="@app.css" text="Neighberhoods:" />
+      <Label layoutX="749.0" layoutY="416.0" prefHeight="46.0" prefWidth="156.0" styleClass="loginLabel" stylesheets="@app.css" text="Deliveries:" />
+      <Label layoutX="1046.0" layoutY="416.0" prefHeight="46.0" prefWidth="156.0" styleClass="loginLabel" stylesheets="@app.css" text="Delivery Persons:" />
+      <Label layoutX="469.0" layoutY="283.0" prefHeight="46.0" prefWidth="399.0" styleClass="loginLabel" stylesheets="@app.css" text="Choose delivery area you would like to edit:" />
+      <ComboBox fx:id="IDsComboBx" layoutX="858.0" layoutY="295.0" onAction="#showDetails" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <Button fx:id="removeNeighBtn" layoutX="497.0" layoutY="491.0" mnemonicParsing="false" onAction="#removeNeigh" styleClass="loginbtn" stylesheets="@app.css" text="Remove" />
+      <Button fx:id="addNeighBtn" layoutX="497.0" layoutY="561.0" mnemonicParsing="false" onAction="#addNeigh" prefHeight="36.0" prefWidth="88.0" styleClass="loginbtn" stylesheets="@app.css" text="Add" />
+      <Button fx:id="removeDelivBtn" layoutX="843.0" layoutY="492.0" mnemonicParsing="false" onAction="#removeDeliv" styleClass="loginbtn" stylesheets="@app.css" text="Remove" />
+      <Button fx:id="addDelivBtn" layoutX="843.0" layoutY="561.0" mnemonicParsing="false" onAction="#addDeliv" prefHeight="36.0" prefWidth="88.0" styleClass="loginbtn" stylesheets="@app.css" text="Add" />
+      <Button fx:id="removeDelPBtn" layoutX="1168.0" layoutY="491.0" mnemonicParsing="false" onAction="#removeDelP" styleClass="loginbtn" stylesheets="@app.css" text="Remove" />
+      <Button fx:id="addDelPBtn" layoutX="1168.0" layoutY="561.0" mnemonicParsing="false" onAction="#addDelP" prefHeight="36.0" prefWidth="88.0" styleClass="loginbtn" stylesheets="@app.css" text="Add" />
+      <ComboBox fx:id="areaneighBx" layoutX="382.0" layoutY="498.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <ComboBox fx:id="delvBx" layoutX="718.0" layoutY="567.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <ComboBox fx:id="delPBx" layoutX="1051.0" layoutY="567.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <ComboBox fx:id="neighBx" layoutX="382.0" layoutY="567.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <ComboBox fx:id="areadelvBx" layoutX="718.0" layoutY="498.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <ComboBox fx:id="areadelPBx" layoutX="1049.0" layoutY="497.0" prefHeight="23.0" prefWidth="99.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+      <Label layoutX="382.0" layoutY="451.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="Belong's to the area" />
+      <Label layoutX="382.0" layoutY="521.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="The rest" />
+      <Label layoutX="1046.0" layoutY="451.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="Belong's to the area" />
+      <Label layoutX="718.0" layoutY="451.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="Belong's to the area" />
+      <Label layoutX="1051.0" layoutY="521.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="The rest" />
+      <Label layoutX="718.0" layoutY="521.0" prefHeight="46.0" prefWidth="145.0" stylesheets="@app.css" text="The rest" />
+   </children>
+</AnchorPane>

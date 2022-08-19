@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MangOpsCustomerAddController">
+   <children>
+      <ImageView fitHeight="772.0" fitWidth="1624.0" layoutX="8.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="699.0" layoutY="285.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="First name:" />
+      <Label layoutX="763.0" layoutY="227.0" prefHeight="46.0" prefWidth="194.0" text="Add Customer">
+         <font>
+            <Font name="Microsoft Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="699.0" layoutY="331.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Last Name:" />
+      <TextField fx:id="customerLName" layoutX="803.0" layoutY="341.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="699.0" layoutY="394.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Birth day:" />
+      <DatePicker fx:id="customerBday" layoutX="792.0" layoutY="402.0" promptText="mm/dd/yyyy" />
+      <Label layoutX="699.0" layoutY="456.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Gender:" />
+      <ComboBox fx:id="customerGender" layoutX="792.0" layoutY="465.0" prefHeight="25.0" prefWidth="83.0" promptText="Male" styleClass="SignUpRbtn" stylesheets="@app.css" visibleRowCount="3" />
+      <Label layoutX="699.0" layoutY="524.0" prefHeight="46.0" prefWidth="141.0" styleClass="loginLabel" stylesheets="@app.css" text="Sensetiveis:" />
+      <Label layoutX="866.0" layoutY="524.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Lactose" />
+      <RadioButton fx:id="sensLactose" layoutX="844.0" layoutY="539.0" mnemonicParsing="false" selected="true" />
+      <Label layoutX="1038.0" layoutY="525.0" prefHeight="46.0" prefWidth="117.0" styleClass="loginLabel" stylesheets="@app.css" text="Gluten" />
+      <RadioButton fx:id="sensGluten" layoutX="1009.0" layoutY="541.0" mnemonicParsing="false" />
+      <Label layoutX="699.0" layoutY="582.0" prefHeight="46.0" prefWidth="150.0" styleClass="loginLabel" stylesheets="@app.css" text="Neighberhood:" />
+      <ComboBox fx:id="customerNeighberhood" layoutX="880.0" layoutY="591.0" prefHeight="28.0" prefWidth="112.0" styleClass="SignUpRbtn" stylesheets="@app.css" visibleRowCount="3" />
+      <Button fx:id="addCustomerBtn" layoutX="807.0" layoutY="674.0" mnemonicParsing="false" onAction="#addCustomer" styleClass="loginbtn" stylesheets="@app.css" text="Add Customer" />
+      <TextField fx:id="customerFName" layoutX="806.0" layoutY="295.0" styleClass="loginfld" stylesheets="@app.css" />
+      <Label layoutX="699.0" layoutY="628.0" prefHeight="27.0" prefWidth="105.0" styleClass="loginLabel" stylesheets="@app.css" text="Email:">
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custEmail" layoutX="758.0" layoutY="630.0" prefHeight="23.0" prefWidth="200.0" promptText="email@gmail.com" styleClass="loginfld" stylesheets="@app.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MangOpsCooksViewByExpController">
+   <children>
+      <ImageView fitHeight="772.0" fitWidth="1616.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="733.0" layoutY="220.0" styleClass="loginLabel" stylesheets="@app.css" text="View By Expertise" />
+      <TextArea fx:id="viewResualt" editable="false" layoutX="571.0" layoutY="480.0" prefHeight="233.0" prefWidth="498.0" styleClass="searchresult" stylesheets="@app.css" />
+      <ListView fx:id="list" layoutX="664.0" layoutY="323.0" onMouseClicked="#showDetails" prefHeight="146.0" prefWidth="295.0" styleClass="searchresult" stylesheets="@app.css" />
+      <Label layoutX="680.0" layoutY="280.0" styleClass="loginLabel" stylesheets="@app.css" text="Select Expertise:" />
+      <ComboBox fx:id="byExpComboBx" layoutX="839.0" layoutY="281.0" onAction="#getRelevantCooks" prefWidth="150.0" promptText="American" styleClass="SignUpRbtn" stylesheets="@app.css" visibleRowCount="3" />
+   </children>
+</AnchorPane>

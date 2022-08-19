@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutX="10.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClientShoppingCartController">
+   <children>
+      <ImageView fitHeight="764.0" fitWidth="2143.0" layoutX="-285.0" layoutY="-33.0">
+         <image>
+            <Image url="@../../media/genericbackground.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="101.0" layoutY="41.0" prefHeight="670.0" prefWidth="345.0" styleClass="profOps" stylesheets="@app.css">
+         <children>
+            <Label layoutX="62.0" layoutY="116.0" prefHeight="40.0" prefWidth="248.0" text="Shopping cart" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="124.0" fitWidth="135.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/carticn.png" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+            <Label layoutX="20.0" layoutY="410.0" prefHeight="40.0" prefWidth="82.0" text="Selected:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="DishFromCart" layoutX="96.0" layoutY="414.0" prefHeight="33.0" prefWidth="179.0" textFill="#dc9212">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="447.0" prefHeight="27.0" prefWidth="110.0" text="price per unit:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="fromCartPrice" layoutX="133.0" layoutY="450.0" prefHeight="21.0" prefWidth="135.0" textFill="#dc9212">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="removeBtn" fitHeight="69.0" fitWidth="70.0" layoutX="248.0" layoutY="493.0" onMouseClicked="#removeDish" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/removeforcart.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="503.0" prefHeight="27.0" prefWidth="82.0" text="Amount:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="550.0" prefHeight="40.0" prefWidth="82.0" text="Total:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalCost" layoutX="95.0" layoutY="550.0" prefHeight="33.0" prefWidth="210.0" textFill="#14db14">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="OrderBtn" layoutX="92.0" layoutY="590.0" mnemonicParsing="false" onAction="#addOrder" styleClass="querybtn" stylesheets="@app.css" text="Add Order" />
+            <TextField fx:id="dishCartAmount" alignment="CENTER" editable="false" layoutX="124.0" layoutY="503.0" prefHeight="25.0" prefWidth="50.0" promptText="1" styleClass="amountfld" stylesheets="@app.css" />
+            <Button fx:id="addtoRemoveBtn" layoutX="185.0" layoutY="502.0" mnemonicParsing="false" onAction="#addtoRemove" prefHeight="14.0" prefWidth="36.0" styleClass="amountbtn" stylesheets="@app.css" text="+" />
+            <Button fx:id="removefromRemoveBtn" layoutX="84.0" layoutY="502.0" mnemonicParsing="false" onAction="#removefromRemove" prefHeight="14.0" prefWidth="36.0" styleClass="amountbtn" stylesheets="@app.css" text="-" />
+            <Pane layoutX="24.0" layoutY="165.0" prefHeight="245.0" prefWidth="248.0" styleClass="selected" stylesheets="@app.css">
+               <children>
+                  <ListView fx:id="cartList" layoutX="24.0" layoutY="17.0" onMouseClicked="#showInfoFromCart" prefHeight="202.0" prefWidth="199.0" styleClass="selectedresult" stylesheets="@app.css" />
+               </children>
+            </Pane>
+            <Label layoutX="218.0" layoutY="461.0" prefHeight="27.0" prefWidth="155.0" text="Remove from cart" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="1198.0" layoutY="41.0" prefHeight="670.0" prefWidth="329.0" styleClass="profOps" stylesheets="@app.css">
+         <children>
+            <Label layoutX="61.0" layoutY="119.0" prefHeight="40.0" prefWidth="199.0" text="Selected Dish" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="385.0" prefHeight="40.0" prefWidth="82.0" text="Selected:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="selectedName" layoutX="121.0" layoutY="389.0" prefHeight="33.0" prefWidth="199.0" textFill="#dc9212">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="425.0" prefHeight="27.0" prefWidth="117.0" text="price per unit:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="selectedPrice" layoutX="164.0" layoutY="428.0" prefHeight="21.0" prefWidth="164.0" textFill="#dc9212">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="addBtn" fitHeight="77.0" fitWidth="82.0" layoutX="122.0" layoutY="563.0" onMouseClicked="#addDish" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/addforcart.jpeg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="51.0" layoutY="165.0" prefHeight="224.0" prefWidth="219.0" styleClass="selected" stylesheets="@app.css">
+               <children>
+                  <ImageView fx:id="selectedDish" blendMode="DARKEN" fitHeight="178.0" fitWidth="190.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="relevantLbl" layoutX="69.0" layoutY="172.0" prefHeight="40.0" prefWidth="82.0" text="Relevant" textFill="#18a922" visible="false">
+                     <font>
+                        <Font name="MS Reference Sans Serif" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="notrelevantLbl" layoutX="59.0" layoutY="172.0" prefHeight="40.0" prefWidth="101.0" text="Not Relevant" textFill="#ff0707" visible="false">
+                     <font>
+                        <Font name="MS Reference Sans Serif" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="56.0" layoutY="465.0" prefHeight="27.0" prefWidth="82.0" text="Amount:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="496.0" prefHeight="40.0" prefWidth="82.0" text="Total:" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalSelectedCost" layoutX="132.0" layoutY="496.0" prefHeight="40.0" prefWidth="164.0" textFill="#dc9212">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dishSelectedAmount" alignment="CENTER" editable="false" layoutX="169.0" layoutY="464.0" prefHeight="25.0" prefWidth="50.0" promptText="1" styleClass="amountfld" stylesheets="@app.css" />
+            <Button fx:id="addItemBtn" layoutX="226.0" layoutY="463.0" mnemonicParsing="false" onAction="#addItem" prefHeight="14.0" prefWidth="36.0" styleClass="amountbtn" stylesheets="@app.css" text="+" />
+            <Button fx:id="removeItemBtn" layoutX="129.0" layoutY="462.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="33.0" prefWidth="36.0" styleClass="amountbtn" stylesheets="@app.css" text="-" />
+            <Label layoutX="122.0" layoutY="536.0" prefHeight="27.0" prefWidth="101.0" text="Add to cart" textFill="WHITE">
+               <font>
+                  <Font name="MS Reference Sans Serif" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="101.0" layoutX="116.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/selectedDish.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="586.0" layoutY="183.0" prefHeight="102.0" prefWidth="425.0" styleClass="selected" stylesheets="@app.css">
+         <children>
+            <ImageView fx:id="dessertsIcn" blendMode="DARKEN" fitHeight="69.0" fitWidth="70.0" layoutX="339.0" layoutY="17.0" onMouseClicked="#showDessertsIcn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/dessicn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="starterIcn" blendMode="DARKEN" fitHeight="110.0" fitWidth="110.0" layoutX="14.0" layoutY="-6.0" onMouseClicked="#showStartersIcn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/firstsicn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mainsIcn" blendMode="DARKEN" fitHeight="110.0" fitWidth="121.0" layoutX="159.0" layoutY="-6.0" onMouseClicked="#showMainsIcn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/mainsIcn.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="dessertBtn" layoutX="345.0" layoutY="74.0" mnemonicParsing="false" onAction="#showDesserts" styleClass="helpBtn" stylesheets="@app.css" text="Desserts" />
+            <Button fx:id="mainBtn" layoutX="194.0" layoutY="77.0" mnemonicParsing="false" onAction="#showMain" styleClass="helpBtn" stylesheets="@app.css" text="Mains" />
+            <Button fx:id="startersBtn" layoutX="40.0" layoutY="75.0" mnemonicParsing="false" onAction="#showStarters" styleClass="helpBtn" stylesheets="@app.css" text="Starters" />
+         </children>
+      </Pane>
+      <Pane fx:id="dessPane" layoutX="449.0" layoutY="291.0" prefHeight="414.0" prefWidth="718.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" prefHeight="403.0" prefWidth="718.0">
+               <content>
+                  <GridPane fx:id="itemsGPane" alignment="CENTER" prefHeight="382.0" prefWidth="719.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane fx:id="mainsPane" layoutX="459.0" layoutY="301.0" prefHeight="397.0" prefWidth="718.0">
+         <children>
+            <ScrollPane fx:id="scrollPane1" prefHeight="403.0" prefWidth="718.0">
+               <content>
+                  <GridPane fx:id="itemsGPane1" alignment="CENTER" prefHeight="382.0" prefWidth="702.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane fx:id="startersPane" layoutX="459.0" layoutY="301.0" prefHeight="397.0" prefWidth="718.0">
+         <children>
+            <ScrollPane fx:id="scrollPane2" prefHeight="403.0" prefWidth="718.0">
+               <content>
+                  <GridPane fx:id="itemsGPane2" alignment="CENTER" prefHeight="384.0" prefWidth="699.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

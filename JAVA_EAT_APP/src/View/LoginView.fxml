@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1596.0" styleClass="login" stylesheets="@app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <ImageView fx:id="loginImg" fitHeight="897.0" fitWidth="1710.0" layoutX="-8.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/LOGINwallpaprer.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="uName" layoutX="748.0" layoutY="482.0" onMouseClicked="#initilaize" onMouseEntered="#initilaize" prefHeight="27.0" prefWidth="215.0" promptText="User  Name" styleClass="loginfld" stylesheets="@app.css" />
+      <PasswordField fx:id="uPass" layoutX="748.0" layoutY="542.0" onMouseClicked="#initilaize" onMouseEntered="#initilaize" prefHeight="26.0" prefWidth="215.0" promptText="Password" styleClass="loginfld" stylesheets="@app.css" />
+      <Button id="lgnBtn" fx:id="lgnBtn" layoutX="749.0" layoutY="582.0" mnemonicParsing="false" onAction="#lgnAction" prefHeight="44.0" prefWidth="98.0" styleClass="loginbtn" stylesheets="@app.css" text="Login" textFill="#2c2929">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="wrongName" layoutX="1050.0" layoutY="494.0" prefHeight="0.0" prefWidth="195.0" textFill="#ff0606" />
+      <Label fx:id="wrongPASS" layoutX="1050.0" layoutY="548.0" prefHeight="20.0" prefWidth="195.0" textFill="#d30e0e" />
+      <ImageView fx:id="userImg" blendMode="DARKEN" fitHeight="30.0" fitWidth="32.0" layoutX="710.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/userIcon.jpeg" />
+         </image>
+         <effect>
+            <ColorAdjust contrast="0.29" hue="0.17" saturation="-0.33" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="passImg" blendMode="DARKEN" fitHeight="27.0" fitWidth="30.0" layoutX="710.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/passwordIcon.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="visiblePassImg" blendMode="DARKEN" fitHeight="30.0" fitWidth="41.0" layoutX="964.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../media/showPasswordIcon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="passSet" layoutX="938.0" layoutY="522.0" mnemonicParsing="false" onAction="#visibleSet" prefHeight="69.0" prefWidth="79.0" styleClass="loginpassvisible" stylesheets="@app.css" />
+      <TextField fx:id="visiblePassword" layoutX="748.0" layoutY="544.0" onMouseClicked="#initilaize" onMouseEntered="#initilaize" prefHeight="30.0" prefWidth="205.0" styleClass="loginfld" stylesheets="@app.css" visible="false" />
+      <Button fx:id="signUpBtn" layoutX="856.0" layoutY="582.0" mnemonicParsing="false" onAction="#sgnUp" prefHeight="44.0" prefWidth="98.0" styleClass="loginbtn" stylesheets="@app.css" text="Sign Up" />
+      <Button fx:id="forgotBtn" layoutX="759.0" layoutY="626.0" mnemonicParsing="false" onAction="#sendEmail" styleClass="helpBtn" stylesheets="@app.css" text="Forgot user name or password?" />
+   </children>
+</AnchorPane>

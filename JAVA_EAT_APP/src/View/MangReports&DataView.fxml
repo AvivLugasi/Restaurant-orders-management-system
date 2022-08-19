@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="1596.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MangReportsDataContoller">
+   <children>
+      <AnchorPane fx:id="toReplacePane" prefHeight="731.0" prefWidth="1596.0" />
+      <Pane fx:id="mainPane" prefHeight="753.0" prefWidth="1596.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="244.0" fitWidth="223.0" layoutX="266.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/WhatsApp%20Image%202021-08-01%20at%2022.14.06.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="595.0" fitWidth="213.0" layoutX="267.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../media/WhatsApp%20Image%202021-08-01%20at%2022.14.06.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="783.0" fitWidth="1920.0" layoutX="-141.0" layoutY="-7.0">
+               <image>
+                  <Image url="@../../media/genericbackground.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="delByPPane" layoutX="496.0" layoutY="220.0" prefHeight="508.0" prefWidth="933.0" visible="false">
+               <children>
+                  <Label layoutX="281.0" layoutY="14.0" prefHeight="57.0" prefWidth="77.0" styleClass="loginLabel" stylesheets="@app.css" text="Month:">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="14.0" prefHeight="57.0" prefWidth="153.0" styleClass="loginLabel" stylesheets="@app.css" text="Delivery Person:">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="showBtn" layoutX="445.0" layoutY="24.0" mnemonicParsing="false" onAction="#showResult" prefHeight="36.0" prefWidth="134.0" styleClass="loginbtn" stylesheets="@app.css" text="Show Report" />
+                  <ComboBox fx:id="dpIds" layoutX="192.0" layoutY="31.0" prefHeight="23.0" prefWidth="77.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+                  <ComboBox fx:id="montsListView" layoutX="351.0" layoutY="31.0" prefHeight="23.0" prefWidth="77.0" styleClass="SignUpRbtn" stylesheets="@app.css" />
+                  <ListView fx:id="list" layoutX="54.0" layoutY="107.0" onMouseClicked="#showMoreDetails" prefHeight="130.0" prefWidth="267.0" styleClass="searchresult" stylesheets="@app.css" />
+                  <Label layoutX="15.0" layoutY="71.0" prefHeight="36.0" prefWidth="375.0" styleClass="loginLabel" stylesheets="@app.css" text="Deliveries by the selected delivery person">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="result" editable="false" layoutX="21.0" layoutY="252.0" prefHeight="212.0" prefWidth="357.0" styleClass="searchresult" stylesheets="@app.css" />
+                  <PieChart fx:id="delByDelP" layoutX="398.0" layoutY="60.0" prefHeight="450.0" prefWidth="528.0" title="Deliveries Amount Per delivery persons" />
+               </children>
+            </Pane>
+            <BarChart fx:id="compsPopChart" layoutX="498.0" layoutY="232.0" prefHeight="508.0" prefWidth="933.0" title="Components Popularity" visible="false">
+              <xAxis>
+                <CategoryAxis fx:id="ComponentsX" label="Components" prefHeight="60.0" prefWidth="856.0" side="BOTTOM" startMargin="10.0" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="FrequencyY" label="Frequency" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <BarChart fx:id="revnExpChart" layoutX="503.0" layoutY="242.0" prefHeight="480.0" prefWidth="855.0" title="Revenue from Express" visible="false">
+               <xAxis>
+                  <CategoryAxis fx:id="revX" label="Customers ID's &amp; Revenues" prefHeight="60.0" prefWidth="856.0" side="BOTTOM" startMargin="10.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="revY" label="Revenue" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <PieChart fx:id="delperTypeChart" layoutX="496.0" layoutY="227.0" prefHeight="486.0" prefWidth="933.0" title="Deliveries per Type" visible="false" />
+            <PieChart fx:id="ProfitRelationChart" layoutX="498.0" layoutY="237.0" prefHeight="486.0" prefWidth="933.0" title="Profit Relation (Click on slice to see value)" visible="false" />
+            <Label fx:id="value" prefHeight="25.0" prefWidth="102.0" styleClass="loginLabel" stylesheets="@app.css" visible="false" />
+            <Pane layoutX="260.0" layoutY="69.0" prefHeight="689.0" prefWidth="247.0" styleClass="profOps" stylesheets="@app.css">
+               <children>
+                  <ImageView fitHeight="255.0" fitWidth="223.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../media/WhatsApp%20Image%202021-08-01%20at%2022.14.06.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="72.0" layoutY="161.0" prefHeight="57.0" prefWidth="102.0" stylesheets="@app.css" text="Queries" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="HelpIcn" fitHeight="57.0" fitWidth="46.0" layoutX="96.0" layoutY="510.0" onMouseClicked="#readMore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../media/helpIcn.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="helpBtn" layoutX="94.0" layoutY="558.0" mnemonicParsing="false" onAction="#readMorePopUp" prefHeight="27.0" prefWidth="54.0" styleClass="infoBtn" stylesheets="@app.css" text="Help">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delPerTypeBtn" layoutX="13.0" layoutY="272.0" mnemonicParsing="false" onAction="#delPerType" prefHeight="44.0" prefWidth="223.0" styleClass="querybtn" stylesheets="@app.css" text="Deliveries Per Type" />
+                  <Button fx:id="expRevenBtn" layoutX="13.0" layoutY="326.0" mnemonicParsing="false" onAction="#expReven" prefHeight="44.0" prefWidth="223.0" styleClass="querybtn" stylesheets="@app.css" text="Revenue From Express" />
+                  <Button fx:id="popCompBtn" layoutX="13.0" layoutY="379.0" mnemonicParsing="false" onAction="#popComp" prefHeight="44.0" prefWidth="223.0" styleClass="querybtn" stylesheets="@app.css" text="Popular Components" />
+                  <Button fx:id="profitRltBtn" layoutX="13.0" layoutY="435.0" mnemonicParsing="false" onAction="#profit" prefHeight="44.0" prefWidth="223.0" styleClass="querybtn" stylesheets="@app.css" text="Profit Relation" />
+                  <Button fx:id="delsPerPBtn" layoutX="13.0" layoutY="218.0" mnemonicParsing="false" onAction="#delsPerP" prefHeight="44.0" prefWidth="223.0" styleClass="querybtn" stylesheets="@app.css" text="Deliveries By Person" />
+                  <ImageView fitHeight="96.0" fitWidth="84.0" layoutX="79.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../media/dataicn.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
