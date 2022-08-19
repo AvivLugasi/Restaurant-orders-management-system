@@ -1,6 +1,6 @@
 # Restaurant-orders-management-system
 
-This project is the work of me and my co-student Guy Yehezkel’s in, this task is the finale project in OOP course.<br>
+This project is the work of me and my co-student Guy Yehezkel in, this task is the finale project in OOP course.<br>
 Includes: classes, inheritance, interfaces, data structures, exceptions, Enums, singleton, serialization, JavaFX, javax.mail and Google Map integration.<br>
 <br>
 The project is an information system for a restaurant, it contains a mangement side for the restaurant owner's and ordering system for the customers.<br>
